@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://qe4fm4qm7h6y"]
+
+[ext_resource type="PackedScene" uid="uid://co6sguuprnqr5" path="res://blender/trainwagon.blend" id="1_bt46m"]
+
+[node name="VehicleBody3D" type="VehicleBody3D" unique_id=1319483862]
+
+[node name="trainwagon" parent="." unique_id=2140884957 instance=ExtResource("1_bt46m")]
