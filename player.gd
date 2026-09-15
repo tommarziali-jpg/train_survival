@@ -62,4 +62,4 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	move_and_slide()
-	print("hi, ich habe starke schmerzen")
+	print("hi, jetzt geht es mir gut")
