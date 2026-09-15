@@ -42,7 +42,8 @@ func _physics_process(delta: float) -> void:
 	if input_dir == Vector2.ZERO:
 		velocity.x = 0.0
 		velocity.z = 0.0
-	
+		
+
 
 
 	var cam: Camera3D = $Camera3D
@@ -61,3 +62,4 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	move_and_slide()
+	print("hi")
