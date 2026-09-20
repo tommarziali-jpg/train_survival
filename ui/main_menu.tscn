@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://c5fm8dyj177cb"]
+
+[ext_resource type="Script" uid="uid://ceyv21mgkjtyq" path="res://scripts/main_menu.gd" id="1_main_menu"]
+
+[node name="MainMenu" type="Control" unique_id=642429044]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main_menu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=344834222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.086, 0.098, 0.129, 1)
+
+[node name="MainPanel" type="CenterContainer" parent="." unique_id=1201870042]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel" unique_id=1052423207]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Title" type="Label" parent="MainPanel/VBox" unique_id=1261674658]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "TRAIN SURVIVAL"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="MainPanel/VBox" unique_id=51364436]
+custom_minimum_size = Vector2(320, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="MainPanel/VBox" unique_id=1893251671]
+custom_minimum_size = Vector2(320, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="MainPanel/VBox" unique_id=336115020]
+custom_minimum_size = Vector2(320, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[node name="SettingsPanel" type="CenterContainer" parent="." unique_id=483107031]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="SettingsPanel" unique_id=1761101349]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="SettingsTitle" type="Label" parent="SettingsPanel/VBox" unique_id=1803348052]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="SettingsPanel/VBox" unique_id=822862772]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Click a key to rebind it. Press Escape to cancel."
+horizontal_alignment = 1
+
+[node name="BindList" type="VBoxContainer" parent="SettingsPanel/VBox" unique_id=493904202]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Actions" type="HBoxContainer" parent="SettingsPanel/VBox" unique_id=1526493450]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="SettingsPanel/VBox/Actions" unique_id=108418799]
+custom_minimum_size = Vector2(220, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Reset to Defaults"
+
+[node name="BackButton" type="Button" parent="SettingsPanel/VBox/Actions" unique_id=887210795]
+custom_minimum_size = Vector2(220, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Back"

@@ -27,12 +27,7 @@ func _input(event: InputEvent) -> void:
 		camera_pitch = clamp(camera_pitch, deg_to_rad(-60), deg_to_rad(60))
 		$Camera3D.rotation.x = camera_pitch
 
-func _physics_process(delta: float) -> void:
-	#print(position)
-	# damit der spieler nach einem sprung wieder zurück fällt
-	if not is_on_floor():
-		velocity.y -= gravity * delta
-	
+func _physics_process(delta: float) -> void:	
 	#Vektor 2 definieren (x und z) y wird nur bem springen verändert
 	#um dann in ein vektor 3 umzuwandeln (durch keybinds)
 	var input_dir := Vector2(
@@ -56,10 +51,16 @@ func _physics_process(delta: float) -> void:
 	var move_dir: Vector3 = (forward * input_dir.y + right * input_dir.x).normalized()
 
 	velocity.x = move_dir.x * SPEED * speed_multiplier
-	velocity.z = move_dir.z * SPEED * speed_multiplier
+	velocity.z = move_dir.z * SPEED * speed_multiplier 
+	
+	if is_on_floor():
+		if Input.is_action_just_pressed("jump"):
+			velocity.y = JUMP_VELOCITY
 
-	if Input.is_action_just_pressed("jump"):
-		velocity.y = JUMP_VELOCITY
-
+	#print(position)
+	# damit der spieler nach einem sprung wieder zurück fällt
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+		
 	move_and_slide()
-	print("hi, jetzt geht es mir gut")
+	

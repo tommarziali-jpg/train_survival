@@ -1,7 +1,34 @@
 [gd_scene format=3 uid="uid://qe4fm4qm7h6y"]
 
 [ext_resource type="PackedScene" uid="uid://co6sguuprnqr5" path="res://blender/trainwagon.blend" id="1_bt46m"]
+[ext_resource type="PackedScene" uid="uid://cqp7fmk83kih1" path="res://player.tscn" id="2_a6orm"]
 
-[node name="VehicleBody3D" type="VehicleBody3D" unique_id=1319483862]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a6orm"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[node name="trainwagon" parent="." unique_id=2140884957 instance=ExtResource("1_bt46m")]
+[sub_resource type="Sky" id="Sky_wjl8l"]
+sky_material = SubResource("ProceduralSkyMaterial_a6orm")
+
+[sub_resource type="Environment" id="Environment_biyyu"]
+background_mode = 2
+sky = SubResource("Sky_wjl8l")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="main" type="Node3D" unique_id=277043033]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=707187063]
+environment = SubResource("Environment_biyyu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=518042947]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="train" type="VehicleBody3D" parent="." unique_id=1050060519]
+
+[node name="trainwagon" parent="train" unique_id=2140884957 instance=ExtResource("1_bt46m")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="player" parent="." unique_id=866968413 instance=ExtResource("2_a6orm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.544855, 0)
