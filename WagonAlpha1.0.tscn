@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://nv12k328vs6l"]
+
+[ext_resource type="PackedScene" uid="uid://bbub7iortnqun" path="res://blender/WagonAlpha1.0.blend" id="1_mu4rh"]
+[ext_resource type="PackedScene" uid="uid://itqkfow1o4b1" path="res://blender/charakter1.blend" id="2_iflyy"]
+
+[node name="Node3D" type="Node3D" unique_id=1266177919]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1250767327]
+
+[node name="Wagon" type="VehicleBody3D" parent="." unique_id=1021167153]
+
+[node name="WagonAlpha1_0" parent="Wagon" unique_id=436619260 instance=ExtResource("1_mu4rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7447767, 0.8259983, 0.030887604)
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=811310752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.622535, -19.405216)
+
+[node name="charakter1" parent="Player" unique_id=1034453360 instance=ExtResource("2_iflyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.128452, 0)

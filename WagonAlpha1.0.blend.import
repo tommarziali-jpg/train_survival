@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://co6sguuprnqr5"
-path="res://.godot/imported/trainwagon.blend-ac36b9a725fc21f555efdafdd9136a9c.scn"
+uid="uid://dvjtyp3f307he"
+path="res://.godot/imported/WagonAlpha1.0.blend-e360097e874701c603a26f02c81d4dd4.scn"
 
 [deps]
 
-source_file="res://blender/trainwagon.blend"
-dest_files=["res://.godot/imported/trainwagon.blend-ac36b9a725fc21f555efdafdd9136a9c.scn"]
+source_file="res://WagonAlpha1.0.blend"
+dest_files=["res://.godot/imported/WagonAlpha1.0.blend-e360097e874701c603a26f02c81d4dd4.scn"]
 
 [params]
 
@@ -46,7 +46,7 @@ blender/nodes/punctual_lights=true
 blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
-blender/meshes/vertex_colors=2
+blender/meshes/vertex_colors=1
 blender/meshes/uvs=true
 blender/meshes/normals=true
 blender/meshes/export_geometry_nodes_instances=false
@@ -60,4 +60,4 @@ blender/animation/limit_playback=true
 blender/animation/always_sample=true
 blender/animation/group_tracks=true
 gltf/naming_version=2
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1
