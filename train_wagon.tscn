@@ -28,8 +28,8 @@ shadow_enabled = true
 
 [node name="train" type="VehicleBody3D" parent="." unique_id=1050060519]
 
-[node name="trainwagon" parent="train" unique_id=2140884957 instance=ExtResource("1_bt46m")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 20, 23.350489, 0, 0)
+[node name="trainwagon" parent="train" unique_id=931293403 instance=ExtResource("1_bt46m")]
+transform = Transform3D(12, 0, 0, 0, 10, 0, 0, 0, 9, 0, 15.442361, 0)
 
 [node name="WagonAlpha1_0" parent="train" unique_id=1500956440 instance=ExtResource("2_wjl8l")]
 
