@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://co6sguuprnqr5" path="res://blender/trainwagon.blend" id="1_bt46m"]
 [ext_resource type="PackedScene" uid="uid://cqp7fmk83kih1" path="res://player.tscn" id="2_a6orm"]
-[ext_resource type="PackedScene" uid="uid://dvjtyp3f307he" path="res://WagonAlpha1.0.blend" id="2_wjl8l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a6orm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,10 +27,8 @@ shadow_enabled = true
 
 [node name="train" type="VehicleBody3D" parent="." unique_id=1050060519]
 
-[node name="trainwagon" parent="train" unique_id=931293403 instance=ExtResource("1_bt46m")]
-transform = Transform3D(12, 0, 0, 0, 10, 0, 0, 0, 9, 0, 15.442361, 0)
-
-[node name="WagonAlpha1_0" parent="train" unique_id=1500956440 instance=ExtResource("2_wjl8l")]
+[node name="trainwagon" parent="train" unique_id=2100120347 instance=ExtResource("1_bt46m")]
+transform = Transform3D(12, 0, 0, 0, 10, 0, 0, 0, 9, 0, 0, 0)
 
 [node name="player" parent="." unique_id=866968413 instance=ExtResource("2_a6orm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.544855, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30.799028, 0)
