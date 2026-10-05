@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://nv12k328vs6l"]
 
-[ext_resource type="PackedScene" uid="uid://bbub7iortnqun" path="res://blender/WagonAlpha1.0.blend" id="1_mu4rh"]
+[ext_resource type="PackedScene" uid="uid://ddkrdgab183s8" path="res://blender/WagonAlpha1.0.blend" id="1_mu4rh"]
 [ext_resource type="PackedScene" uid="uid://itqkfow1o4b1" path="res://blender/charakter1.blend" id="2_iflyy"]
+[ext_resource type="PackedScene" uid="uid://fow8pedx04rq" path="res://blender/StuhlAlpha1.0.blend" id="3_haqiu"]
+[ext_resource type="PackedScene" uid="uid://i4rrrm6npjh3" path="res://blender/SchienenAlpha1.0.blend" id="4_gyphc"]
 
 [node name="Node3D" type="Node3D" unique_id=1266177919]
 
@@ -9,11 +11,20 @@
 
 [node name="Wagon" type="VehicleBody3D" parent="." unique_id=1021167153]
 
-[node name="WagonAlpha1_0" parent="Wagon" unique_id=436619260 instance=ExtResource("1_mu4rh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7447767, 0.8259983, 0.030887604)
+[node name="WagonAlpha1_0" parent="Wagon" unique_id=1997002439 instance=ExtResource("1_mu4rh")]
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=811310752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.622535, -19.405216)
 
 [node name="charakter1" parent="Player" unique_id=1034453360 instance=ExtResource("2_iflyy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.128452, 0)
+
+[node name="Stuhl" type="VehicleBody3D" parent="." unique_id=666211614]
+
+[node name="StuhlAlpha1_0" parent="Stuhl" unique_id=1825624532 instance=ExtResource("3_haqiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21.00111)
+
+[node name="Schienenteil" type="VehicleBody3D" parent="." unique_id=2052877339]
+
+[node name="SchienenAlpha1_0" parent="Schienenteil" unique_id=1283328582 instance=ExtResource("4_gyphc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3570414, 0)
